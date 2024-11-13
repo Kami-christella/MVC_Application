@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="movie_MGMTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="uuid" />
+    </Key>
+    <Property Name="title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="duration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uuid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Order" Relationship="Self.FK_Order_Movie" FromRole="Movie" ToRole="Order" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="uuid" />
+    </Key>
+    <Property Name="moviePos" Type="Int32" />
+    <Property Name="theaterID" Type="Int32" />
+    <Property Name="showTime" Type="Int32" />
+    <Property Name="clientIdentification" Type="Int32" />
+    <Property Name="price" Type="Int32" />
+    <Property Name="uuid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="movieID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Movie" Relationship="Self.FK_Order_Movie" FromRole="Order" ToRole="Movie" />
+    <NavigationProperty Name="Theater" Relationship="Self.FK_Order_Theater" FromRole="Order" ToRole="Theater" />
+  </EntityType>
+  <EntityType Name="Theater">
+    <Key>
+      <PropertyRef Name="uuid" />
+    </Key>
+    <Property Name="movieID" Type="Int32" />
+    <Property Name="capacity" Type="Int32" />
+    <Property Name="showTime" Type="DateTime" Precision="0" />
+    <Property Name="theaterName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="uuid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Orders" Relationship="Self.FK_Order_Theater" FromRole="Theater" ToRole="Order" />
+  </EntityType>
+  <Association Name="FK_Order_Movie">
+    <End Role="Movie" Type="Self.Movie" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="uuid" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="uuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Theater">
+    <End Role="Theater" Type="Self.Theater" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Theater">
+        <PropertyRef Name="uuid" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="theaterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="movie_MGMTEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Movies" EntityType="Self.Movie" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Theaters" EntityType="Self.Theater" />
+    <AssociationSet Name="FK_Order_Movie" Association="Self.FK_Order_Movie">
+      <End Role="Movie" EntitySet="Movies" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Theater" Association="Self.FK_Order_Theater">
+      <End Role="Theater" EntitySet="Theaters" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

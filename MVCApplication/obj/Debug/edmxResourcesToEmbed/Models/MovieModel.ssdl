@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="movie_MGMTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'movie_MGMT.dbo.Complex' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Complex">
+          <Property Name="childPrice" Type="int" />
+          <Property Name="adultPrice" Type="int" />
+          <Property Name="seniorPrice" Type="int" />
+          <Property Name="orders" Type="nvarchar" MaxLength="50" />
+          <Property Name="theaters" Type="nvarchar" MaxLength="50" />
+          <Property Name="movies" Type="nvarchar" MaxLength="50" />
+          <Property Name="errLog" Type="nvarchar" MaxLength="50" />
+          <Property Name="salesReport" Type="nvarchar" MaxLength="50" />
+          <Property Name="managerReports" Type="nvarchar" MaxLength="50" />
+          <Property Name="reportCounter" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="uuid" />
+    </Key>
+    <Property Name="title" Type="nvarchar" MaxLength="50" />
+    <Property Name="duration" Type="nvarchar" MaxLength="50" />
+    <Property Name="uuid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="uuid" />
+    </Key>
+    <Property Name="moviePos" Type="int" />
+    <Property Name="theaterID" Type="int" />
+    <Property Name="showTime" Type="int" />
+    <Property Name="clientIdentification" Type="int" />
+    <Property Name="price" Type="int" />
+    <Property Name="uuid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="movieID" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Theater">
+    <Key>
+      <PropertyRef Name="uuid" />
+    </Key>
+    <Property Name="movieID" Type="int" />
+    <Property Name="capacity" Type="int" />
+    <Property Name="showTime" Type="date" />
+    <Property Name="theaterName" Type="nvarchar" MaxLength="50" />
+    <Property Name="uuid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Order_Movie">
+    <End Role="Movie" Type="Self.Movie" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Movie">
+        <PropertyRef Name="uuid" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="uuid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Theater">
+    <End Role="Theater" Type="Self.Theater" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Theater">
+        <PropertyRef Name="uuid" />
+      </Principal>
+      <Dependent Role="Order">
+        <PropertyRef Name="theaterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="movie_MGMTModelStoreContainer">
+    <EntitySet Name="Movie" EntityType="Self.Movie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Theater" EntityType="Self.Theater" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Order_Movie" Association="Self.FK_Order_Movie">
+      <End Role="Movie" EntitySet="Movie" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Theater" Association="Self.FK_Order_Theater">
+      <End Role="Theater" EntitySet="Theater" />
+      <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,108 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|c:\\users\\kami\\source\\repos\\mvcapplication\\mvcapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|solutionrelative:mvcapplication\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|c:\\users\\kami\\source\\repos\\mvcapplication\\mvcapplication\\views\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|solutionrelative:mvcapplication\\views\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|c:\\users\\kami\\source\\repos\\mvcapplication\\mvcapplication\\views\\theaterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|solutionrelative:mvcapplication\\views\\theaterscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|c:\\users\\kami\\source\\repos\\mvcapplication\\mvcapplication\\views\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|solutionrelative:mvcapplication\\views\\moviescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|c:\\users\\kami\\source\\repos\\mvcapplication\\mvcapplication\\models\\moviemodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{F8ECDFD8-196B-43EC-B34D-63DB4479F8D1}|MVCApplication\\MVCApplication.csproj|solutionrelative:mvcapplication\\models\\moviemodel.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\OrdersController.cs",
+              "RelativeDocumentMoniker": "MVCApplication\\Views\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\OrdersController.cs",
+              "RelativeToolTip": "MVCApplication\\Views\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:55:44.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TheatersController.cs",
+              "DocumentMoniker": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\TheatersController.cs",
+              "RelativeDocumentMoniker": "MVCApplication\\Views\\TheatersController.cs",
+              "ToolTip": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\TheatersController.cs",
+              "RelativeToolTip": "MVCApplication\\Views\\TheatersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:55:10.739Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MoviesController.cs",
+              "DocumentMoniker": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\MoviesController.cs",
+              "RelativeDocumentMoniker": "MVCApplication\\Views\\MoviesController.cs",
+              "ToolTip": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\MoviesController.cs",
+              "RelativeToolTip": "MVCApplication\\Views\\MoviesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-12T17:53:36.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MovieModel.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Models\\MovieModel.edmx",
+              "RelativeDocumentMoniker": "MVCApplication\\Models\\MovieModel.edmx",
+              "ToolTip": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Models\\MovieModel.edmx [Diagram1]",
+              "RelativeToolTip": "MVCApplication\\Models\\MovieModel.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-11-12T17:47:13.853Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MVCApplication\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Kami\\source\\repos\\MVCApplication\\MVCApplication\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MVCApplication\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABoAAAAAAAAAAAApwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-12T17:38:11.212Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

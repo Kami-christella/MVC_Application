@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="movie_MGMTModelStoreContainer" CdmEntityContainer="movie_MGMTEntities">
+    <EntitySetMapping Name="Movies">
+      <EntityTypeMapping TypeName="movie_MGMTModel.Movie">
+        <MappingFragment StoreEntitySet="Movie">
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="uuid" ColumnName="uuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="movie_MGMTModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="moviePos" ColumnName="moviePos" />
+          <ScalarProperty Name="theaterID" ColumnName="theaterID" />
+          <ScalarProperty Name="showTime" ColumnName="showTime" />
+          <ScalarProperty Name="clientIdentification" ColumnName="clientIdentification" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="uuid" ColumnName="uuid" />
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Theaters">
+      <EntityTypeMapping TypeName="movie_MGMTModel.Theater">
+        <MappingFragment StoreEntitySet="Theater">
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="showTime" ColumnName="showTime" />
+          <ScalarProperty Name="theaterName" ColumnName="theaterName" />
+          <ScalarProperty Name="uuid" ColumnName="uuid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

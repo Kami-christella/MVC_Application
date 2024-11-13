@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MVCApplication.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.moviePos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.showTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.clientIdentification)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.movieID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Movie.title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Theater.theaterName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.moviePos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.showTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.clientIdentification)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.movieID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Movie.title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Theater.theaterName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.uuid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.uuid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.uuid })
+        </td>
+    </tr>
+}
+
+</table>
